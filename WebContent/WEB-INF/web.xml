@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>    <!-- 名字随便 -->
+        <servlet-class>cn.junbing.jorbaServlet.LoginServlet</servlet-class>    <!-- servlet类名-->
+    </servlet>
+    
+	<servlet>
+        <servlet-name>RegistServlet</servlet-name>    <!-- 名字随便 -->
+        <servlet-class>cn.junbing.jorbaServlet.RegistServlet</servlet-class>    <!-- servlet类名-->
+    </servlet>
+
+	<servlet>
+        <servlet-name>MeServlet</servlet-name> 
+        <servlet-class>cn.junbing.jorbaServlet.MeServlet</servlet-class>  
+    </servlet>
+    
+	<servlet>
+        <servlet-name>RoomServlet</servlet-name> 
+        <servlet-class>cn.junbing.jorbaServlet.RoomServlet</servlet-class>  
+    </servlet>
+    
+	<servlet>
+        <servlet-name>SendDatingServlet</servlet-name> 
+        <servlet-class>cn.junbing.jorbaServlet.SendDatingServlet</servlet-class>  
+    </servlet>
+    
+	<!-- ______________________________________________________________________________________________________________________________________________________________________________ -->
+	
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>    <!-- url访问虚拟路径，最后我们就是通过工程名/Login进行访问的，像这样http://localhost:8080/JorbaServlet/Login-->
+    </servlet-mapping>
+
+	<servlet-mapping>
+        <servlet-name>RegistServlet</servlet-name>
+        <url-pattern>/RegistServlet</url-pattern>
+    </servlet-mapping>
+    
+	<servlet-mapping>
+        <servlet-name>MeServlet</servlet-name>
+        <url-pattern>/MeServlet</url-pattern> 
+    </servlet-mapping>
+    
+	<servlet-mapping>
+        <servlet-name>RoomServlet</servlet-name>
+        <url-pattern>/RoomServlet</url-pattern> 
+    </servlet-mapping>
+    
+	<servlet-mapping>
+        <servlet-name>SendDatingServlet</servlet-name>
+        <url-pattern>/SendDatingServlet</url-pattern> 
+    </servlet-mapping>
+	
+	
+	<!-- ______________________________________________________________________________________________________________________________________________________________________________ -->
+	
+	<resource-ref>
+	    <description>DB Connection</description>
+		<res-ref-name>jdbc/jorba</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+    
+</web-app>
